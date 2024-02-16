@@ -1,23 +1,60 @@
-﻿body {
-margin: 0;
+﻿/* Stili per il layout delle card */
+.card {
+    width: 250px; /* larghezza della card */
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* ombra della card */
+    transition: box-shadow 0.3s ease-in-out; /* transizione dell'ombra al passaggio del mouse */
+    margin: 10px; /* margini esterni */
 }
 
-.hero-img{
-    width: 50px;
-    height: 50px;
-}
-
+/* Contenitore delle card */
 .hero {
-    background-color: forestgreen;
-    text-align: center;
-
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* centro il contenuto orizzontalmente */
+    align-items: center; /* centro il contenuto verticalmente */
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
+/* Ombra più intensa al passaggio del mouse */
+.card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
 
+/* Stili per le immagini all'interno delle card */
 .card-img-top {
-    width: 250px;
-    height: 200px;
-    object-fit: cover;
-    margin-left: 5px;
-    object-position: top;
+    width: 100%;
+    height:auto; 
+    object-fit: cover; 
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+/* Stili per il corpo delle card */
+.card-body {
+    padding: 0.75rem;
+    }
+
+/* Stili per il titolo delle card */
+.card-title {
+    font-size: 1rem; /* dimensione del titolo */
+    font-weight: bold;
+}
+
+/* Stili per il testo delle card */
+.card-text {
+    font-size: 0.875rem; /* dimensione del testo */
+    margin-bottom: 0.5rem;
+}
+
+/* Stili per i pulsanti */
+.btn {
+    display: inline-block;
+    padding: 0.25rem 0.5rem; /* padding del pulsante */
+    font-size: 0.875rem; /* dimensione del testo del pulsante */
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out; /* transizione del colore di sfondo */
 }
