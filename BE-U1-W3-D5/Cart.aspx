@@ -12,20 +12,22 @@
             <!-- Inizio della card -->
             <div class="card mb-3" style="max-width: 540px;"> 
                 <!-- Riga senza margini -->
-                <div class="row no-gutters"> 
+                <div class="row"> 
                     <!-- Colonna di larghezza media (md) per l'immagine -->
                     <div class="col-md-4 my-2"> 
                         <!-- Immagine della card -->
                         <img src="<%#Item.ImageComics %>" class="card-img" alt="..."> 
                     </div>
                     <!-- Colonna di larghezza media (md) per il corpo della card -->
-                    <div class="col-md-8"> 
+                    <div> 
                         <!-- Corpo della card -->
                         <div class="card-body"> 
                             <!-- Titolo della card -->
                             <h5 class="card-title"><%#Item.TitleComics %></h5> 
                             <!-- Testo della card con prezzo formattato come valuta -->
                             <p class="card-text"><small class="text-muted"><%#Item.PriceComics.ToString("c2") %></small></p> 
+<!-- Pulsante per rimuovere il fumetto dal carrello -->
+<asp:Button ID="RemoveFromCart" CssClass="btn btn-danger" CommandArgument="<%# Item.IdComics %>" runat="server" Text="Rimuovi dal Carrello"  OnClick="RemoveFromCart_Click"/>
                         </div>
                     </div>
                 </div>

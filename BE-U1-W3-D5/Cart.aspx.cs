@@ -28,6 +28,7 @@ namespace BE_U1_W3_D5
             LoadCart();
         }
 
+
         // Metodo per caricare il carrello nella Repeater e calcolare il totale
         private void LoadCart()
         {
@@ -46,6 +47,19 @@ namespace BE_U1_W3_D5
                 total += Convert.ToDecimal(comic.PriceComics);
             }
             return total;
+        }
+
+        protected void RemoveFromCart_Click(object sender, EventArgs e)
+        {
+            // Ottieni l'ID del fumetto da rimuovere dal carrello
+            Button btn = (Button)sender;
+            int comicId = Convert.ToInt32(btn.CommandArgument);
+
+            // Rimuovi il fumetto dal carrello
+            Comics.Cart.RemoveAll(c => c.IdComics == comicId);
+
+            // Ricarica il carrello
+            LoadCart();
         }
     }
 }
