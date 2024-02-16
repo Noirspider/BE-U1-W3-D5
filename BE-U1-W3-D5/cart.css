@@ -1,9 +1,52 @@
-﻿body {
+﻿/* Stile per la card */
+.card {
+    max-width: 540px;
+    margin-bottom: 20px;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
 }
+
+/* Stile per l'immagine della card */
 .card-img {
-    width: 250px;
-    height: 200px;
-    object-fit: cover;
-    margin-left: 5px;
-    object-position: top;
+    width: 100%;
+    height: 100%;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+
+/* Stile per il corpo della card */
+.card-body {
+    padding: 1rem;
+}
+
+/* Stile per il titolo della card */
+.card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+/* Stile per il testo della card */
+.card-text {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+    /* Stile per il testo del prezzo */
+    .card-text small {
+        color: #6c757d; /* Colore del testo del prezzo */
+    }
+
+/* Stile per il totale */
+#LabelTotale {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+/* Stile per il pulsante "Svuota Carrello" */
+#EmptyCart {
+    display: block;
+    margin: 0 auto;
+    width: 200px;
 }
